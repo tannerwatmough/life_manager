@@ -404,7 +404,7 @@ CREATE TABLE tasks (
 
 CREATE TABLE goals (
     goalId int NOT NULL AUTO_INCREMENT,
-    email varchar(50) NOT NULL,
+    email varchar (50) NOT NULL,
     name varchar (50) NOT NULL,
     category int NOT NULL, 
     info varchar (255) NULL, 
@@ -413,7 +413,58 @@ CREATE TABLE goals (
     PRIMARY KEY (goalId),
     FOREIGN KEY (email) REFERENCES users(email),
     FOREIGN KEY (category) REFERENCES categories(categoryId)
+);
 
+CREATE TABLE books (
+    bookId int NOT NULL AUTO_INCREMENT,
+    email varchar(50) NOT NULL,
+    name varchar (50) NOT NULL,
+    author varchar (50) NOT NULL,
+    genre varchar (50) NOT NULL,
+    platform varchar (50) NOT NULL,
+    priority BOOLEAN,
+    completedDate datetime NULL,
+    summary text NULL,
+    PRIMARY KEY (bookId),
+    FOREIGN KEY (email) REFERENCES users(email)
+);
+
+CREATE TABLE games (
+    gameId int NOT NULL AUTO_INCREMENT,
+    email varchar(50) NOT NULL,
+    name varchar (50) NOT NULL,
+    platform varchar (20) NOT NULL,
+    length varchar (20) NOT NULL,
+    completedDate datetime NULL,
+    url varchar(50) NULL,
+    notes varchar(255) NULL,
+    PRIMARY KEY (gameId),
+    FOREIGN KEY (email) REFERENCES users(email)
+);
+
+CREATE TABLE courses (
+    courseId int NOT NULL AUTO_INCREMENT,
+    email varchar(50) NOT NULL,
+    name varchar (50),
+    area varchar (50),
+    url varchar(50),
+    completedDate datetime NULL,
+    -- Intended to be URL to link to page with notes --
+    notes varchar(50) NULL,
+    PRIMARY KEY (courseId),
+    FOREIGN KEY (email) REFERENCES users(email)
+);
+
+CREATE TABLE movies (
+    movieId int NOT NULL AUTO_INCREMENT,
+    email varchar(50) NOT NULL,
+    name varchar (50),
+    year int NOT NULL,
+    completedDate datetime NULL,
+    rating int NULL,
+    summary text NULL,
+    PRIMARY KEY (movieId),
+    FOREIGN KEY (email) REFERENCES users(email)
 );
 
 -- Create program admin var named lm_admin
