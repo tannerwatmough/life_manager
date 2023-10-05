@@ -9,6 +9,10 @@ CREATE TABLE users (
     PRIMARY KEY (email)
 );
 
+-- Obvious placeholder password.
+INSERT INTO users VALUES
+('tannerwatmough@gmail.com', 'password');
+
 CREATE TABLE dailyHabit (
     dailyId int NOT NULL AUTO_INCREMENT,
     email varchar(50) NOT NULL,
