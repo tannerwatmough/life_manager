@@ -76,8 +76,8 @@ INSERT INTO dailyHabit VALUES
 (17, 'tannerwatmough@gmail.com', 'Gaming', 2, 'Stream or record it.', 0, 0, '2023-09-25', NULL),
 (18, 'tannerwatmough@gmail.com', 'Movie', 2, 'Summary on website', 0, 0, '2023-09-25', NULL),
 (19, 'tannerwatmough@gmail.com', 'Digital Cleanup', 2, 'Notion, Bookmarks, YouTube playlist', 0, 0, '2023-09-25', NULL),
-(20, 'tannerwatmough@gmail.com', 'Cooking', 2, 'One new meals a week', 0, 0, '2023-09-25', NULL),
-(21, 'tannerwatmough@gmail.com', 'Coursework', 2, 'University, Professional Development, and Interests', 0, 0, '2023-09-25', NULL),
+(20, 'tannerwatmough@gmail.com', 'Cooking', 2, 'One new meal a week', 0, 0, '2023-09-25', NULL),
+(21, 'tannerwatmough@gmail.com', 'Course Work', 2, 'University, Professional Development, and Interests', 0, 0, '2023-09-25', NULL),
 (22, 'tannerwatmough@gmail.com', 'Dog Walks', 3, '1 Hour of Walking', 0, 0, '2023-09-25', NULL),
 (23, 'tannerwatmough@gmail.com', 'Outside Time', 3, '15 Minutes', 0, 0, '2023-09-25', NULL),
 (24, 'tannerwatmough@gmail.com', 'Food Tracking', 3, 'Chronometer - <1800 kCal', 0, 0, '2023-09-25', NULL),
@@ -402,6 +402,9 @@ CREATE TABLE tasks (
     FOREIGN KEY (category) REFERENCES categories(categoryId)
 );
 
+INSERT INTO tasks VALUES
+(1, 'tannerwatmough@gmail.com', 'Go to a coffee shop alone.', 11, NULL, 0, NULL);
+
 CREATE TABLE goals (
     goalId int NOT NULL AUTO_INCREMENT,
     email varchar (50) NOT NULL,
@@ -414,6 +417,9 @@ CREATE TABLE goals (
     FOREIGN KEY (email) REFERENCES users(email),
     FOREIGN KEY (category) REFERENCES categories(categoryId)
 );
+
+INSERT INTO goals VALUES
+(1, 'tannerwatmough@gmail.com', 'Go to Peru', 11, NULL, 0, NULL);
 
 CREATE TABLE books (
     bookId int NOT NULL AUTO_INCREMENT,

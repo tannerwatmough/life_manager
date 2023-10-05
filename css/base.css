@@ -89,6 +89,7 @@ a:hover {
 }
 
 table {
+    width: 100%;
     border: 1px solid black;
     border-collapse: collapse;
 }
@@ -96,6 +97,23 @@ td, th {
     border: 1px solid black;
     padding: .2em .5em .2em .5em;
     text-align: left;
+}
+
+td:first-child {
+    width: 20%;
+}
+
+td:nth-child(2) {
+    width: 25%;
+}
+
+td:nth-child(3), td:nth-child(4), td:nth-child(5), td:nth-child(6) {
+    width: 10%;
+}
+
+td:last-child, td:nth-child(7), td:nth-child(8) {
+    width: 5%;
+    text-align: center;
 }
 
 form {
