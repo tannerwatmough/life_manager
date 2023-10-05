@@ -17,6 +17,7 @@ function get_all_habits() {
     }
 }
 
+// Updates habit streak, longest streak, and last date a habit was done.
 function update_streak($habit_id, $current, $longest) {
     global $db;
     $query = 'UPDATE dailyHabit 
