@@ -109,6 +109,7 @@ CREATE TABLE tasks (
     info varchar (255) NULL,
     priority int NOT NULL,
     dueDate datetime NULL,
+    completedDate datetime NULL,
     PRIMARY KEY (taskId),
     FOREIGN KEY (email) REFERENCES users(email),
     FOREIGN KEY (category) REFERENCES categories(categoryId)
@@ -122,6 +123,7 @@ CREATE TABLE goals (
     info varchar (255) NULL, 
     priority int NULL,
     dueDate datetime NULL,
+    completedDate datetime NULL,
     PRIMARY KEY (goalId),
     FOREIGN KEY (email) REFERENCES users(email),
     FOREIGN KEY (category) REFERENCES categories(categoryId)
@@ -177,18 +179,6 @@ CREATE TABLE movies (
     summary text NULL,
     PRIMARY KEY (movieId),
     FOREIGN KEY (email) REFERENCES users(email)
-);
-
-CREATE TABLE completed (
-    completeId int NOT NULL AUTO_INCREMENT,
-    email varchar(50) NOT NULL,
-    name varchar (50) NOT NULL,
-    completedDate datetime NOT NULL,
-    category int NOT NULL, 
-    info varchar (255) NULL, 
-    PRIMARY KEY (completeId),
-    FOREIGN KEY (email) REFERENCES users(email),
-    FOREIGN KEY (category) REFERENCES categories(categoryId)
 );
 
 -- Create program admin var named lm_admin

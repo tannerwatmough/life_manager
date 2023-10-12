@@ -13,11 +13,11 @@ if ($habits == NULL) {
 }
 ?>
 <main>
-  <h2>Daily Routines</h2>
+  <button type="button" class="collapsible heading-large active">Daily Routines</button>
 
-  <h3>Morning Routine</h3>
+  <button type="button" class="collapsible heading-medium">Morning Routine</button>
 
-  <section>
+  <section class="collapse">
     <table>
       <tr>
         <th>Habit</th>
@@ -97,9 +97,9 @@ if ($habits == NULL) {
 
   <!-- Give paragraphs IDs so you can return to where you were on page refresh after
        incrementing or decrementing a habit. -->
-  <h3 id="health_rout">Health Routine</h3>
+  <button type="button" class="collapsible heading-medium" id="health_rout">Health Routine</button>
 
-  <section>
+  <section class="collapse">
     <table>
       <tr>
         <th>Habit</th>
@@ -171,9 +171,9 @@ if ($habits == NULL) {
     </table>
   </section>
 
-  <h3 id="learn_rout">Learning Routine</h3>
+  <button type="button" class="collapsible heading-medium" id="learn_rout">Learning Routine</button>
 
-  <section>
+  <section class="collapse">
     <table>
       <tr>
         <th>Habit</th>
@@ -248,9 +248,9 @@ if ($habits == NULL) {
     </p>
   </section>
           
-  <h3 id="clean_rout">Cleaning Routine</h3>
+  <button type="button" class="collapsible heading-medium" id="clean_rout">Cleaning Routine</button>
 
-  <section>
+  <section class="collapse">
     <table>
       <tr>
         <th>Habit</th>
@@ -322,9 +322,9 @@ if ($habits == NULL) {
     </table>
   </section>
 
-  <h3 id="night_rout">Night Routine</h3>
+  <button type="button" class="collapsible heading-medium" id="night_rout">Night Routine</button>
 
-  <section>
+  <section class="collapse">
     <table>
       <tr>
         <th>Habit</th>
