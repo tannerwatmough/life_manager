@@ -20,7 +20,7 @@ switch ($action) {
     header('Location: https://localhost/life_manager/controller/goals_controller.php');
     break;
   case 'dashboard':
-    header('Location: https://localhost/life_manager/controller/dashboard_controller.php');
+    header('Location: https://localhost/life_manager/controller/day_controller.php');
     break;
   default:
     include('view/home_view.php');
