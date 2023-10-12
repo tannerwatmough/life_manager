@@ -45,18 +45,21 @@ footer p {
 }
 
 h1 {
-    font-size: 150%;
+    font-size: 2rem;
     margin: 0;
     padding: .5em 0 .25em;
 }
+
 h2 {
-    font-size: 120%;
+    font-size: 1.5rem;
     margin: 0;
     padding: .25em 0 .25em ;
 }
+
 h1, h2 {
     color: black;
 }
+
 p {
     margin: .5em 0 .5em 0;
     padding: 0;
@@ -66,15 +69,18 @@ ul {
     margin: 0;
     padding: 0;
 }
+
 li {
     margin: 0;
     padding: 0;
 }
+
 nav ul {
     list-style-type: none;
     margin-left: 0;
     padding-left: 0;
 }
+
 nav ul li {
     padding-bottom: 0.5em;
 }
@@ -84,6 +90,7 @@ a {
     font-weight: bold;
     text-decoration: none;
 }
+
 a:hover {
     color: #0019F3;
 }
@@ -93,6 +100,7 @@ table {
     border: 1px solid black;
     border-collapse: collapse;
 }
+
 td, th {
     border: 1px solid black;
     padding: .2em .5em .2em .5em;
@@ -120,26 +128,42 @@ form {
     margin: 0;
 }
 
-textarea {
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 80%;
-}
-
 .collapsible {
     background-color: rgb(200, 200, 200);
     color: rgb(50, 50, 50);
     cursor: pointer;
     padding: 5px;
     width: 100%;
+    border: none;
+    text-align: left;
+    font-weight: bold;
+}
+
+.heading-medium {
+    font-size: 1.2rem;
+}
+
+.heading-large {
+    font-size: 1.5rem;
+}
+
+.collapsible:hover {
+    background-color: rgb(225, 225, 225);
+}
+
+.active {
     border: 1px solid black;
 }
 
-.active, .collapsible:hover {
-    background-color: rgb(255, 255, 255);
+.collapse {
+    display: block;
+    padding: 10px 0;
+    overflow: hidden;
 }
 
-.collapse {
-    padding: 0 18px;
-    display: none;
-    overflow: hidden;
+.container {
+    display: flex;
+    width: 50%;
+    justify-content: space-between;
+    margin: 15px 0;
 }

@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Life Manager</title>
     <link rel="stylesheet" type="text/css"
-          href="https://localhost/life_manager/css/base.css" />
+          href="/life_manager/css/base.css" />
 </head>
 
 <!-- the body section -->
@@ -18,7 +18,7 @@
             <h1>Life Manager</h1>
             <ul>
                 <li>
-                    <a href="https://localhost/life_manager/index.php">
+                    <a href="/life_manager/index.php">
                         Home
                     </a>
                 </li>

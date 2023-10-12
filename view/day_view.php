@@ -13,9 +13,16 @@ if ($habits == NULL) {
 }
 ?>
 <main>
-  <button type="button" class="collapsible heading-large active">Daily Routines</button>
+  <div class="container">
+    <a href="/life_manager/controller/day_controller.php">Daily Tasks</a>
+    <a href="/life_manager/controller/week_controller.php">Weekly Tasks</a>
+    <a href="/life_manager/controller/month_controller.php">Monthly Tasks</a>
+    <a href="/life_manager/controller/seasonal_controller.php">Seasonal Tasks</a>
+  </div>
 
-  <button type="button" class="collapsible heading-medium">Morning Routine</button>
+  <h2>Daily Routines</h2>
+    
+  <button type="button" class="collapsible heading-medium active">Morning Routine</button>
 
   <section class="collapse">
     <table>
@@ -26,6 +33,7 @@ if ($habits == NULL) {
         <th>Longest Streak</th>
         <th>Start Date</th>
         <th>Last Completed Date</th>
+        <th>&nbsp;</th>
         <th>&nbsp;</th>
         <th>&nbsp;</th>
       </tr>
@@ -58,7 +66,7 @@ if ($habits == NULL) {
             </td>
             <td>
               <!-- Absolute path to ensure user can reach controller without error -->
-              <form action="https://localhost/life_manager/controller/daily_controller.php"
+              <form action="https://localhost/life_manager/controller/day_controller.php"
                  method="post">
                 <!-- Hidden action to pass commands. Decrement here. -->
                 <input type="hidden" name="action" 
@@ -69,7 +77,7 @@ if ($habits == NULL) {
               </form>
             </td>
             <td>
-              <form action="https://localhost/life_manager/controller/daily_controller.php"
+              <form action="https://localhost/life_manager/controller/day_controller.php"
                  method="post">
                 <!-- Hidden action to pass commands. Increment here. -->
                 <input type="hidden" name="action" 
@@ -80,7 +88,7 @@ if ($habits == NULL) {
               </form>
             </td>
             <td>
-              <form action="https://localhost/life_manager/controller/daily_controller.php"
+              <form action="https://localhost/life_manager/controller/day_controller.php"
                  method="post">
                 <!-- Hidden action to pass edit command. -->
                 <input type="hidden" name="action" 
@@ -97,10 +105,10 @@ if ($habits == NULL) {
 
   <!-- Give paragraphs IDs so you can return to where you were on page refresh after
        incrementing or decrementing a habit. -->
-  <button type="button" class="collapsible heading-medium" id="health_rout">Health Routine</button>
+  <button type="button" class="collapsible heading-medium active" id="health_rout">Health Routine</button>
 
   <section class="collapse">
-    <table class="collapse">
+    <table>
       <tr>
         <th>Habit</th>
         <th>Description</th>
@@ -108,6 +116,7 @@ if ($habits == NULL) {
         <th>Longest Streak</th>
         <th>Start Date</th>
         <th>Last Completed Date</th>
+        <th>&nbsp;</th>
         <th>&nbsp;</th>
         <th>&nbsp;</th>
       </tr>
@@ -134,7 +143,7 @@ if ($habits == NULL) {
               ?>
             </td>
             <td>
-              <form action="https://localhost/life_manager/controller/daily_controller.php"
+              <form action="https://localhost/life_manager/controller/day_controller.php"
                  method="post">
                 <input type="hidden" name="action" 
                   value="decrement_value" />
@@ -145,7 +154,7 @@ if ($habits == NULL) {
               </form>
             </td>
             <td>
-              <form action="https://localhost/life_manager/controller/daily_controller.php"
+              <form action="https://localhost/life_manager/controller/day_controller.php"
                  method="post">
                 <input type="hidden" name="action" 
                   value="increment_value" />
@@ -156,7 +165,7 @@ if ($habits == NULL) {
               </form>
             </td>
             <td>
-              <form action="https://localhost/life_manager/controller/daily_controller.php"
+              <form action="https://localhost/life_manager/controller/day_controller.php"
                  method="post">
                 <input type="hidden" name="location" value="#health_rout" />
                 <input type="hidden" name="action" 
@@ -171,7 +180,7 @@ if ($habits == NULL) {
     </table>
   </section>
 
-  <button type="button" class="collapsible heading-medium" id="learn_rout">Learning Routine</button>
+  <button type="button" class="collapsible heading-medium active" id="learn_rout">Learning Routine</button>
 
   <section class="collapse">
     <table>
@@ -182,6 +191,7 @@ if ($habits == NULL) {
         <th>Longest Streak</th>
         <th>Start Date</th>
         <th>Last Completed Date</th>
+        <th>&nbsp;</th>
         <th>&nbsp;</th>
         <th>&nbsp;</th>
       </tr>
@@ -208,7 +218,7 @@ if ($habits == NULL) {
               ?>
             </td>
             <td>
-              <form action="https://localhost/life_manager/controller/daily_controller.php"
+              <form action="https://localhost/life_manager/controller/day_controller.php"
                  method="post">
                 <input type="hidden" name="location" value="#learn_rout" />
                 <input type="hidden" name="action" 
@@ -219,7 +229,7 @@ if ($habits == NULL) {
               </form>
             </td>
             <td>
-              <form action="https://localhost/life_manager/controller/daily_controller.php"
+              <form action="https://localhost/life_manager/controller/day_controller.php"
                  method="post">
                 <input type="hidden" name="location" value="#learn_rout" />
                 <input type="hidden" name="action" 
@@ -230,7 +240,7 @@ if ($habits == NULL) {
               </form>
             </td>
             <td>
-              <form action="https://localhost/life_manager/controller/daily_controller.php"
+              <form action="https://localhost/life_manager/controller/day_controller.php"
                  method="post">
                 <input type="hidden" name="location" value="#learn_rout" />
                 <input type="hidden" name="action" 
@@ -248,7 +258,7 @@ if ($habits == NULL) {
     </p>
   </section>
           
-  <button type="button" class="collapsible heading-medium" id="clean_rout">Cleaning Routine</button>
+  <button type="button" class="collapsible heading-medium active" id="clean_rout">Cleaning Routine</button>
 
   <section class="collapse">
     <table>
@@ -259,6 +269,7 @@ if ($habits == NULL) {
         <th>Longest Streak</th>
         <th>Start Date</th>
         <th>Last Completed Date</th>
+        <th>&nbsp;</th>
         <th>&nbsp;</th>
         <th>&nbsp;</th>
       </tr>
@@ -285,7 +296,7 @@ if ($habits == NULL) {
               ?>
             </td>
             <td>
-              <form action="https://localhost/life_manager/controller/daily_controller.php"
+              <form action="https://localhost/life_manager/controller/day_controller.php"
                  method="post">
                 <input type="hidden" name="location" value="#clean_rout" />
                 <input type="hidden" name="action" 
@@ -296,7 +307,7 @@ if ($habits == NULL) {
               </form>
             </td>
             <td>
-              <form action="https://localhost/life_manager/controller/daily_controller.php"
+              <form action="https://localhost/life_manager/controller/day_controller.php"
                  method="post">
                 <input type="hidden" name="location" value="#clean_rout" />
                 <input type="hidden" name="action" 
@@ -307,7 +318,7 @@ if ($habits == NULL) {
               </form>
             </td>
             <td>
-              <form action="https://localhost/life_manager/controller/daily_controller.php" 
+              <form action="https://localhost/life_manager/controller/day_controller.php" 
                 method="post">
                 <input type="hidden" name="location" value="#clean_rout" />
                 <input type="hidden" name="action" 
@@ -322,7 +333,7 @@ if ($habits == NULL) {
     </table>
   </section>
 
-  <button type="button" class="collapsible heading-medium" id="night_rout">Night Routine</button>
+  <button type="button" class="collapsible heading-medium active" id="night_rout">Night Routine</button>
 
   <section class="collapse">
     <table>
@@ -333,6 +344,7 @@ if ($habits == NULL) {
         <th>Longest Streak</th>
         <th>Start Date</th>
         <th>Last Completed Date</th>
+        <th>&nbsp;</th>
         <th>&nbsp;</th>
         <th>&nbsp;</th>
       </tr>
@@ -359,7 +371,7 @@ if ($habits == NULL) {
               ?>
             </td>
             <td>
-              <form action="https://localhost/life_manager/controller/daily_controller.php" 
+              <form action="https://localhost/life_manager/controller/day_controller.php" 
                 method="post">
                 <input type="hidden" name="location" value="#night_rout" />
                 <input type="hidden" name="action" 
@@ -370,7 +382,7 @@ if ($habits == NULL) {
               </form>
             </td>
             <td>
-              <form action="https://localhost/life_manager/controller/daily_controller.php"
+              <form action="https://localhost/life_manager/controller/day_controller.php"
                  method="post">
                 <input type="hidden" name="location" value="#night_rout" />
                 <input type="hidden" name="action" 
@@ -381,7 +393,7 @@ if ($habits == NULL) {
               </form>
             </td>
             <td>
-              <form action="https://localhost/life_manager/controller/daily_controller.php"
+              <form action="https://localhost/life_manager/controller/day_controller.php"
                  method="post">
                 <input type="hidden" name="location" value="#night_rout" />
                 <input type="hidden" name="action" 
@@ -396,4 +408,22 @@ if ($habits == NULL) {
     </table>
   </section>
 </main>
+<script>
+  // Script from https://www.w3schools.com/howto/howto_js_collapsible.asp
+  // Toggles the table to display or not. 
+  var collapsible = document.getElementsByClassName("collapsible");
+  var i;
+
+  for (i = 0; i < collapsible.length; i++) {
+    collapsible[i].addEventListener("click", function() {
+      this.classList.toggle("active");
+      var content = this.nextElementSibling;
+      if (content.style.display === "none") {
+        content.style.display = "block";
+      } else {
+        content.style.display = "none";
+      }
+    });
+  }
+</script>
 <?php include('footer.php'); ?>

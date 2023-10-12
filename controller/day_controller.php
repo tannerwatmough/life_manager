@@ -35,7 +35,7 @@ switch ($action) {
         update_streak($habit_id, $current, $longest);
       }
     }
-    header("Location: ../view/daily_view.php".$location);
+    header("Location: ../view/day_view.php".$location);
     break;
   case 'decrement_value':
     // Get array of habits from database
@@ -51,7 +51,7 @@ switch ($action) {
         update_streak($habit_id, $current, $longest); 
       }
     }
-    header("Location: ../view/daily_view.php".$location);
+    header("Location: ../view/day_view.php".$location);
     break;
   case 'edit':
     // Get array of habits from database
@@ -61,7 +61,7 @@ switch ($action) {
   default:
     // Get array of habits from database
     $habits = get_all_habits();
-    include($_SERVER['DOCUMENT_ROOT']."/life_manager/view/daily_view.php");
+    include($_SERVER['DOCUMENT_ROOT']."/life_manager/view/day_view.php");
     break;
 }
 ?>
