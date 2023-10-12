@@ -100,7 +100,7 @@ if ($habits == NULL) {
   <button type="button" class="collapsible heading-medium" id="health_rout">Health Routine</button>
 
   <section class="collapse">
-    <table>
+    <table class="collapse">
       <tr>
         <th>Habit</th>
         <th>Description</th>

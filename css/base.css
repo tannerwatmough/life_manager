@@ -140,6 +140,6 @@ textarea {
 
 .collapse {
     padding: 0 18px;
-    display: hidden;
+    display: none;
     overflow: hidden;
 }
