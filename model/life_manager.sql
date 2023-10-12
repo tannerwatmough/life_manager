@@ -134,7 +134,7 @@ CREATE TABLE books (
     author varchar (50) NOT NULL,
     genre varchar (50) NOT NULL,
     platform varchar (50) NOT NULL,
-    priority BOOLEAN,
+    priority BOOLEAN NOT NULL,
     completedDate datetime NULL,
     summary text NULL,
     PRIMARY KEY (bookId),
@@ -157,9 +157,9 @@ CREATE TABLE games (
 CREATE TABLE courses (
     courseId int NOT NULL AUTO_INCREMENT,
     email varchar(50) NOT NULL,
-    name varchar (50),
-    area varchar (50),
-    url varchar(50),
+    name varchar (50) NOT NULL,
+    area varchar (50) NOT NULL,
+    url varchar(50) NULL,
     completedDate datetime NULL,
     -- Intended to be URL to link to page with notes --
     notes varchar(50) NULL,
@@ -177,6 +177,18 @@ CREATE TABLE movies (
     summary text NULL,
     PRIMARY KEY (movieId),
     FOREIGN KEY (email) REFERENCES users(email)
+);
+
+CREATE TABLE completed (
+    completeId int NOT NULL AUTO_INCREMENT,
+    email varchar(50) NOT NULL,
+    name varchar (50) NOT NULL,
+    completedDate datetime NOT NULL,
+    category int NOT NULL, 
+    info varchar (255) NULL, 
+    PRIMARY KEY (completeId),
+    FOREIGN KEY (email) REFERENCES users(email),
+    FOREIGN KEY (category) REFERENCES categories(categoryId)
 );
 
 -- Create program admin var named lm_admin
