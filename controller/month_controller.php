@@ -22,7 +22,7 @@ if ($location == NULL) {
 // Direct user to page based on link action
 switch ($action) {
   case 'increment_value':
-    // Get array of habits from database
+    // Get array of monthlies from database
     $monthlies = get_all_monthly();
     foreach ($monthlies as $monthly) {
       if ($monthly['monthlyId'] == $month_id) {
@@ -38,7 +38,7 @@ switch ($action) {
     header("Location: ../view/month_view.php".$location);
     break;
   case 'decrement_value':
-    // Get array of habits from database
+    // Get array of monthlies from database
     $monthlies = get_all_monthly();
     foreach ($monthlies as $monthly) {
         if ($monthly['monthlyId'] == $month_id) {
@@ -54,13 +54,13 @@ switch ($action) {
     header("Location: ../view/month_view.php".$location);
     break;
   case 'edit':
-    // Get array of habits from database
-    $habits = get_all_monthly();
+    // Get array of monthlies from database
+    $monthlies = get_all_monthly();
     include($_SERVER['DOCUMENT_ROOT']."/life_manager/view/edit_task_view.php");
     break;  
   default:
-    // Get array of habits from database
-    $habits = get_all_monthly();
+    // Get array of monthlies from database
+    $monthlies = get_all_monthly();
     include($_SERVER['DOCUMENT_ROOT']."/life_manager/view/month_view.php");
     break;
 }

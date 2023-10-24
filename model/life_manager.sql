@@ -9,7 +9,7 @@ CREATE TABLE users (
     PRIMARY KEY (email)
 );
 
--- Obvious placeholder password.
+-- Obvious placeholder password. --
 INSERT INTO users VALUES
 ('tannerwatmough@gmail.com', 'password');
 
@@ -159,7 +159,7 @@ CREATE TABLE games (
 CREATE TABLE courses (
     courseId int NOT NULL AUTO_INCREMENT,
     email varchar(50) NOT NULL,
-    name varchar (50) NOT NULL,
+    name varchar (150) NOT NULL,
     area varchar (50) NOT NULL,
     url varchar(50) NULL,
     completedDate datetime NULL,

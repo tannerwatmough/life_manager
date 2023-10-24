@@ -10,18 +10,6 @@ if ($action == NULL) {
 
 // Direct user to page based on link action
 switch ($action) {
-  case 'collections':
-    header('Location: https://localhost/life_manager/controller/collections_controller.php');
-    break;
-  case 'tasks':
-    header('Location: https://localhost/life_manager/controller/tasks_controller.php');
-    break;
-  case 'goals':
-    header('Location: https://localhost/life_manager/controller/goals_controller.php');
-    break;
-  case 'dashboard':
-    header('Location: https://localhost/life_manager/controller/day_controller.php');
-    break;
   default:
     include('view/home_view.php');
     break;

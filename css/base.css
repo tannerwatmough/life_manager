@@ -85,7 +85,7 @@ nav ul li {
     padding-bottom: 0.5em;
 }
 
-a {
+nav a {
     color: black;
     font-weight: bold;
     text-decoration: none;
@@ -166,4 +166,42 @@ form {
     width: 50%;
     justify-content: space-between;
     margin: 15px 0;
+}
+
+nav ul {
+    display: flex;
+    justify-content: space-between;
+}
+
+form {
+    margin: 0;
+}
+
+br {
+    clear: left;
+}
+
+#aligned {
+    margin: .5em 0 2em;
+}
+
+#aligned label {
+    width: 8em;
+    margin-top: .2em;
+    margin-right: 1em;
+    margin-bottom: .5em;
+    float: left;
+}
+
+#aligned input {
+    float: left;
+}
+
+#aligned input[text] {
+    width: 15em;
+}
+
+#aligned .message {
+    margin-left: .5em;
+    width: 15em;
 }

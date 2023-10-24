@@ -13,12 +13,12 @@ if ($weeklies == NULL) {
 }
 ?>
 <main>
-    <div class="container">
+    <nav class="container">
         <a href="/life_manager/controller/day_controller.php">Daily Tasks</a>
         <a href="/life_manager/controller/week_controller.php">Weekly Tasks</a>
         <a href="/life_manager/controller/month_controller.php">Monthly Tasks</a>
         <a href="/life_manager/controller/seasonal_controller.php">Seasonal Tasks</a>
-    </div>
+    </nav>
 
     <h2>Weekly Routines</h2>
     
@@ -529,22 +529,5 @@ if ($weeklies == NULL) {
         </section>
 
 </main>
-<script>
-  // Script from https://www.w3schools.com/howto/howto_js_collapsible.asp
-  // Toggles the table to display or not. 
-  var collapsible = document.getElementsByClassName("collapsible");
-  var i;
-
-  for (i = 0; i < collapsible.length; i++) {
-    collapsible[i].addEventListener("click", function() {
-      this.classList.toggle("active");
-      var content = this.nextElementSibling;
-      if (content.style.display === "none") {
-        content.style.display = "block";
-      } else {
-        content.style.display = "none";
-      }
-    });
-  }
-</script>
+<script src="/life_manager/scripts/script.js"></script>
 <?php include('footer.php'); ?>
